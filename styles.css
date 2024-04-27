@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+body{
+    background-color: black;
+    display: flex;
+}
+
+nav{
+    font-family: "Young Serif", serif;
+    width: 30%;
+    margin-right: 10%;
+    position: sticky;
+    top: 0;
+}
+
+.navbar{
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 3%;
+}
+
+article{
+    margin: 2%;
+    font-family: "Roboto Slab", serif; 
+    background-color: rgb(27, 24, 24);
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    border-radius: 20px;
+}
+
+aside{
+    font-family: "Roboto Slab", serif;
+    align-items: center;
+    text-align: center;
+    margin: 2%;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: rgb(27, 24, 24);
+    color: white;
+}
+#img{
+    width: 40%;
+    max-width: 500px;
+    min-width: 200px;
+    height: auto;
+    border-radius: 20px;
+}
