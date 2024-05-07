@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="nav">
-        <ul >
-            <li>About</li>
-            <li>Education</li>
-            <li>Projects</li>
-            <li>Certifications</li>
-            <li>Skills</li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav class="nav">
+            <ul >
+                <li>About</li>
+                <li>Education</li>
+                <li>Projects</li>
+                <li>Certifications</li>
+                <li>Skills</li>
+            </ul>
+        </nav>
         <div class="div">
-            <aside class="aside">
-                <img src="assests/profile.jpg" alt="My profile picture" id="img">
-                <h1>Mansi Raj</h1>
-                <hr>
-        </aside>
-        <article class="article">
+            <div class="profile">
+                <div class="profilePic"><img src="assests/profile.jpg" alt="My profile picture" id="img"></div>
+                <div class="info">
+                    <ul>
+                        <li><h1>Mansi Raj</h1></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="content">
                 <section>
                     <section id="about">
                         <h2>About</h2>
@@ -30,7 +35,7 @@
                            Devoted to continuous learning and improvement, eager to contribute to the company’s 
                            project and collaborate with teams for mutual growth and success.</sp>
                     </section>
-                
+                    
                     <section id="education">
                         <h2>Education</h2>
                         <ul>
@@ -38,19 +43,19 @@
                                 <h3>Chandigarh University Mohali, Punjab</h3>
                                 <p>Bachelor of Engineering (Computer Science & Engineering), 2025</p>
                             </li>
-                
+                    
                             <li>
                                 <h3>Jawahar Navodaya Vidyalaya Deoghar, Jharkhand</h3>
                                 <p>Higher Secondary School Education (12th), 2020</p>
                             </li>
-                
+                    
                             <li>
                                 <h3>Jawahar Navodaya Vidyalaya Deoghar, Jharkhand</h3>
                                 <p>Secondary School Education (10th), 2018</p>
                             </li>
                         </ul>
                     </section>
-                
+                    
                     <section id="projects">
                         <h2>Projects</h2>
                         <ul>
@@ -61,7 +66,7 @@
                                    interface.
                                 </p>
                             </li>
-                
+                    
                             <li>
                                 <h3>A Portfolio</h3>
                                 <p>I built a web page using HTML, CSS, and JavaScript which is my portfolio. 
@@ -69,13 +74,9 @@
                                     achievements and more, along with my photograph. 
                                 </p>
                             </li>
-                
-                            <li>
-                                
-                            </li>
                         </ul>
                     </section>
-                
+                    
                     <section id="certifications">
                         <h2>Certifications</h2>
                         <ul>
@@ -85,7 +86,7 @@
                             <li>Supervised Machine Learning: Regression and Classification | Coursera</li>
                         </ul>
                     </section>
-                
+                    
                     <section id="technical-skills">
                         <h2>Technical Skills</h2>
                         <ul>
@@ -96,7 +97,8 @@
                         </ul>
                     </section>
                 </section>
-        </article>
+            </div>   
         </div>
+    </div>
 </body>
 </html>

@@ -4,15 +4,24 @@ body{
     background-color: black;
 }
 
- *{
+*{
     margin: 0;
     padding: 0;
- }
+}
+
+.container{
+    margin: 50px;
+    font-family: "Roboto Slab", serif;
+    background-color: rgb(37, 34, 34);
+    color: aliceblue;
+    padding: 1%;
+    height: 70%;
+    border-radius: 50px;
+}
 
 .nav{
     font-family: "Young Serif", serif;
-    margin-left: 25%;
-    border: 1px white;
+    padding: 1%;
 }
 
 
@@ -20,7 +29,7 @@ body{
     display: flex;
     align-items: center;
     list-style-type: none;
-    height: 60px;
+    height: 40px;
     color: aliceblue;
 }
 
@@ -28,34 +37,20 @@ body{
     padding: 0 1%;
 }
 
-.div{
+.profile{
+    margin: 1%;
     display: flex;
 }
 
-.article{
-    margin-top: 3% ;
-    margin-bottom: 5%;
-    margin-left: 2%;
-    margin-right: 5%;
-    font-family: "Roboto Slab", serif; 
-    background-color: rgb(27, 24, 24);
-    color: white;
-    padding: 5%;
-    border-radius: 20px;
+.info ul{
+    float: right;
+    list-style-type: none;
 }
 
-.aside{
-    font-family: "Roboto Slab", serif;
-    align-items: center;
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    padding: 5%;
-    border-radius: 20px;
-    background-color: rgb(27, 24, 24);
-    color: white;
+.content{
+    margin: 1%;
 }
+
 #img{
     width: 40%;
     max-width: 500px;
