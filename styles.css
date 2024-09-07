@@ -59,8 +59,15 @@ aside{
     text-align: center;
 }
 
+.contact{
+    justify-content: space-evenly;
+}
 .contact ul{
     list-style-type: none;
+}
+
+.contact ul li{
+    padding-bottom: 20px;
 }
 
 .contact-info{
@@ -68,13 +75,18 @@ aside{
 }
 
 .icon{
-    font-size: 4rem;
+    font-size: 1rem;
     color: burlywood;
     padding-right: 8px;
 }
 
-text{
+.contact-heading{
+    font-size: 0.8rem;
+    font-weight: light;
+    color: rgb(153, 142, 142);
+}
+
+.text{
     text-align:start;
-    margin-top: 5px;
-    text-align: center;
+    padding-top: 3%;
 }
