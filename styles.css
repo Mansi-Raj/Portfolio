@@ -133,7 +133,7 @@ section h2 {
 .profile-image {
     flex: 1;
     max-width: 300px;
-    order: 2; /* Place image on the right */
+    order: 2; 
 }
 
 .profile-image img {
@@ -148,7 +148,7 @@ section h2 {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #2d0505;
+    color: #823c3c;
     text-transform: capitalize;
     letter-spacing: 1.5px;
     font-style: italic;
@@ -324,6 +324,7 @@ section h2 {
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: 12px;
 }
 
 .project-card::before {
@@ -364,10 +365,28 @@ section h2 {
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
+.card-front h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #f4eff2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 1.2px;
+}
+
 .card-back {
     background: rgba(40, 40, 40, 0.7);
     color: #fff;
     transform: rotateY(180deg);
+}
+
+.card-back p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .project-link {

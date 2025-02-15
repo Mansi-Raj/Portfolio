@@ -58,11 +58,13 @@ function showMoreProjects() {
             {
                 title: 'Weather App',
                 description: 'A real-time weather application using OpenWeatherMap API.',
+                image: './assests/weather.png',
                 link: '#'
             },
             {
                 title: 'Task Manager',
                 description: 'A full-stack task management application with user authentication.',
+                image: './assests/task.webp',
                 link: '#'
             }
         ];
@@ -70,6 +72,7 @@ function showMoreProjects() {
         newProjects.forEach(project => {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
+            projectCard.style.backgroundImage = `url('${project.image}')`;
             projectCard.innerHTML = `
                 <div class="card-inner">
                     <div class="card-front">
