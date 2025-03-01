@@ -56,10 +56,22 @@ function showMoreProjects() {
         // Add more project cards
         const newProjects = [
             {
+                title: 'Ad Perfomance Analytics and Automation',
+                description: '',
+                image: './assests/ad-analytics.png',
+                link: 'https://github.com/Mansi-Raj/Ad-Performance-Analytics-Automation'
+            },
+            {
                 title: 'Weather App',
                 description: 'A real-time weather application using OpenWeatherMap API.',
                 image: './assests/weather.png',
-                link: '#'
+                link: 'https://github.com/Mansi-Raj/Weather-app'
+            },
+            {
+                title: 'Price Comparison Tool',
+                description: 'A data tracking tool using Python and MySQL for comparing product prices across platforms.',
+                image: './assests/price.jpg',
+                link: 'https://github.com/Mansi-Raj/Product-Price-Comparison-Tool'
             },
             {
                 title: 'Task Manager',
