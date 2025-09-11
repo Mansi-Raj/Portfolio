@@ -1,138 +1,155 @@
-// Loading Screen
-window.addEventListener('load', () => {
-    const loadingScreen = document.querySelector('.loading');
-    loadingScreen.style.display = 'none';
-});
+ document.addEventListener('DOMContentLoaded', function() {
+            // Particle.js configuration
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#ffffff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                     "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
 
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-// Lazy Load Animation
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3
-};
+            // Header background on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-gray-900', 'shadow-lg');
+                } else {
+                    header.classList.remove('bg-gray-900', 'shadow-lg');
+                }
+            });
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
+            // Smooth scroll and active nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
 
-document.querySelectorAll('.lazy-load').forEach(element => {
-    observer.observe(element);
-});
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - header.offsetHeight,
+                        behavior: 'smooth'
+                    });
+                    
+                    if(mobileMenu.classList.contains('hidden') === false){
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
 
-// Project Cards Animation
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.querySelector('.card-inner').style.transform = 'rotateY(180deg)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.querySelector('.card-inner').style.transform = 'rotateY(0deg)';
-    });
-});
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - header.offsetHeight - 50;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
 
-// Show More Projects
-let isShowingAll = false;
-const projectGrid = document.getElementById('project-grid');
-const showMoreBtn = document.querySelector('.show-more-btn');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
 
-function showMoreProjects() {
-    if (!isShowingAll) {
-        // Add more project cards
-        const newProjects = [
-            {
-                title: 'Ad Perfomance Analytics and Automation',
-                description: '',
-                image: './assests/ad-analytics.png',
-                link: 'https://github.com/Mansi-Raj/Ad-Performance-Analytics-Automation'
-            },
-            {
-                title: 'Weather App',
-                description: 'A real-time weather application using OpenWeatherMap API.',
-                image: './assests/weather.png',
-                link: 'https://github.com/Mansi-Raj/Weather-app'
-            },
-            {
-                title: 'Price Comparison Tool',
-                description: 'A data tracking tool using Python and MySQL for comparing product prices across platforms.',
-                image: './assests/price.jpg',
-                link: 'https://github.com/Mansi-Raj/Product-Price-Comparison-Tool'
-            },
-            {
-                title: 'Task Manager',
-                description: 'A full-stack task management application with user authentication.',
-                image: './assests/task.webp',
-                link: '#'
+            // Show more projects
+            const showMoreBtn = document.getElementById('show-more-btn');
+            const hiddenProjects = document.querySelectorAll('#project-grid .hidden');
+            
+            showMoreBtn.addEventListener('click', () => {
+                hiddenProjects.forEach(project => {
+                    project.classList.remove('hidden');
+                });
+                showMoreBtn.style.display = 'none';
+            });
+            if(hiddenProjects.length === 0) {
+                showMoreBtn.style.display = 'none';
             }
-        ];
 
-        newProjects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.className = 'project-card';
-            projectCard.style.backgroundImage = `url('${project.image}')`;
-            projectCard.innerHTML = `
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>${project.title}</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>${project.description}</p>
-                        <a href="${project.link}" target="_blank" class="project-link">View Project</a>
-                    </div>
-                </div>
-            `;
-            projectGrid.appendChild(projectCard);
-            
-            // Add hover animation to new cards
-            projectCard.addEventListener('mouseenter', () => {
-                projectCard.querySelector('.card-inner').style.transform = 'rotateY(180deg)';
-            });
-            
-            projectCard.addEventListener('mouseleave', () => {
-                projectCard.querySelector('.card-inner').style.transform = 'rotateY(0deg)';
+
+            // Section reveal on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section > div').forEach(sectionContent => {
+                sectionContent.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700', 'ease-out');
+                observer.observe(sectionContent);
             });
         });
-
-        showMoreBtn.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
-    } else {
-        // Remove added project cards
-        const cards = projectGrid.querySelectorAll('.project-card');
-        for (let i = cards.length - 1; i >= 3; i--) {
-            cards[i].remove();
-        }
-        showMoreBtn.innerHTML = 'Show More <i class="fas fa-chevron-down"></i>';
-    }
-    isShowingAll = !isShowingAll;
-}
-
-// Contact Form Handling
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Here you would typically send the data to a server
-    // For now, just show an alert
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
