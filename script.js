@@ -1,75 +1,72 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Particle.js configuration
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                },
-                "line_linked": {
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
                     "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
+                    "value_area": 800
                 }
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                 "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    }
-                }
+            "color": {
+                "value": "#ffffff"
             },
-            "retina_detect": true
-        });
-    }
-
+            "shape": {
+                "type": "circle",
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+             "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "push": {
+                    "particles_nb": 4
+                }
+            }
+        },
+        "retina_detect": true
+    });
 
     // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -98,12 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - header.offsetHeight,
-                    behavior: 'smooth'
-                });
-            }
+            window.scrollTo({
+                top: targetSection.offsetTop - header.offsetHeight,
+                behavior: 'smooth'
+            });
             
             if(mobileMenu.classList.contains('hidden') === false){
                 mobileMenu.classList.add('hidden');
@@ -122,8 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            const linkHref = link.getAttribute('href');
-            if (linkHref && linkHref.substring(1) === current) {
+            if (link.getAttribute('href').substring(1) === current) {
                 link.classList.add('active');
             }
         });
@@ -133,16 +127,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const showMoreBtn = document.getElementById('show-more-btn');
     const hiddenProjects = document.querySelectorAll('#project-grid .hidden');
     
-    if (showMoreBtn) {
-        showMoreBtn.addEventListener('click', () => {
-            hiddenProjects.forEach(project => {
-                project.classList.remove('hidden');
-            });
-            showMoreBtn.style.display = 'none';
+    showMoreBtn.addEventListener('click', () => {
+        hiddenProjects.forEach(project => {
+            project.classList.remove('hidden');
         });
-        if(hiddenProjects.length === 0) {
-            showMoreBtn.style.display = 'none';
-        }
+        showMoreBtn.style.display = 'none';
+    });
+    if(hiddenProjects.length === 0) {
+        showMoreBtn.style.display = 'none';
     }
 
 

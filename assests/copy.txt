@@ -1,2 +1,0 @@
-font-family: "Young Serif", serif;
-font-family: "Roboto Slab", serif;
