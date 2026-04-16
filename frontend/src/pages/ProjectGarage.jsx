@@ -85,25 +85,22 @@ const ProjectGarage = () => {
                         <SmallProjectCard 
                             title="Amazon Clone UI"
                             desc="A frontend-only e-commerce interface featuring dynamic cart calculations, delivery options, and interactive product grids."
-                            link="https://github.com/Mansi-Raj/javascript-by-supersimpledev/tree/main/lesson-13"
-                            demo="https://mansi-raj.github.io/javascript-by-supersimpledev/lesson-13/amazon.html"
-                            tools="Vanilla JS, HTML, CSS"
+                            link="https://github.com/Mansi-Raj/javascript"
+                            tools="JS, HTML, CSS"
                         />
 
                         <SmallProjectCard 
                             title="Interactive To-Do List"
                             desc="A dynamic to-do list application featuring seamless DOM manipulation, add/delete functionality, and data tracking."
-                            link="https://github.com/Mansi-Raj/javascript-by-supersimpledev"
-                            demo="https://mansi-raj.github.io/javascript-by-supersimpledev/11-todo-list.html"
-                            tools="Vanilla JS, HTML, CSS"
+                            link="https://github.com/Mansi-Raj/javascript"
+                            tools="JS, HTML, CSS"
                         />
 
                         <SmallProjectCard 
                             title="Rock Paper Scissors"
                             desc="An interactive browser-based game with automatic score tracking and persistent data storage using LocalStorage."
-                            link="https://github.com/Mansi-Raj/javascript-by-supersimpledev"
-                            demo="https://mansi-raj.github.io/javascript-by-supersimpledev/12-rock-paper.scissors.html"
-                            tools="Vanilla JS, HTML, CSS"
+                            link="https://github.com/Mansi-Raj/javascript"
+                            tools="JS, HTML, CSS"
                         />
 
                     </div>
