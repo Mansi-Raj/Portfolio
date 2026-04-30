@@ -18,6 +18,17 @@ const ProjectGarage = () => {
                     <h2 className="text-3xl text-green-300 mb-8 text-center border-b border-gray-700 pb-2">Featured Applications</h2>
                     <div className="space-y-8">
                         <ProjectCard
+                            title="StudyMate(AI Study Assistant)"
+                            role="Full Stack Developer"
+                            link="https://github.com/Mansi-Raj/StudyMate"
+                            details={[
+                                "Architected StudyMate, a full-stack educational platform, seamlessly integrating a Spring Boot RESTful API with a responsive Angular front end.",
+                                "Developed a core messaging module with dedicated chat controllers, services, and repositories to efficiently handle real-time user communication.",
+                                "Containerized the application with Docker and Docker Compose, reducing local deployment time and ensuring 100% environment consistency."
+                            ]}
+                            tools="Java, Spring Boot, Maven, Angular, TypeScript, Tailwind CSS, Docker, Docker Compose."
+                        />
+                        <ProjectCard
                             title="Amazon Clone (Full Stack)"
                             role="Full Stack Developer"
                             link="https://github.com/Mansi-Raj"
@@ -32,7 +43,6 @@ const ProjectGarage = () => {
                             title="Personal Expense Tracker"
                             role="Full Stack Developer"
                             link="https://github.com/Mansi-Raj/ExpenseTracker"
-                            demo="https://mansi-raj.github.io/ExpenseTracker/"
                             details={[
                                 "Built a comprehensive, decoupled expense tracking platform featuring a responsive client interface and a secure RESTful API server.",
                                 "Implemented a secure Java/Spring Boot backend to handle complex financial logic, user data isolation, and dynamic PDF report generation using the OpenPDF library.",
