@@ -31,7 +31,7 @@ const ProjectGarage = () => {
                         <ProjectCard
                             title="Amazon Clone (Full Stack)"
                             role="Full Stack Developer"
-                            link="https://github.com/Mansi-Raj"
+                            link="https://github.com/Mansi-Raj/amazon-clone"
                             details={[
                                 "Architected a highly responsive e-commerce platform with a decoupled client-server architecture.",
                                 "Implemented a secure backend API using Spring Boot, handling token-based authentication (JWT) and persistent data management via MySQL.",
@@ -53,7 +53,7 @@ const ProjectGarage = () => {
                         <ProjectCard
                             title="2D Image-to-3D Model Renderer"
                             role="Python Developer (Group Project)"
-                            link="https://github.com/Mansi-Raj"
+                            link="https://github.com/Mansi-Raj/2d-image-to-3d-model"
                             details={[
                                 "Created a depth-mapping algorithm converting grayscale images to precise 3D meshes using numpy-stl.",
                                 "Utilized computational geometry for adaptive meshes and optimized triangulation.",
