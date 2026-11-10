@@ -34,7 +34,7 @@ const Home = () => {
             About Me
           </Link>
           <a
-            href="https://drive.google.com/file/d/11B8t4rasGrlBjEUYFftw14fZcfxC3mRF/view?usp=sharing"
+            href="https://docs.google.com/document/d/1zP-44yHxNkrpNrZdFY4Gho358bLBcZdm/edit?usp=sharing&ouid=102525699789197983862&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-full shadow-lg hover:bg-cyan-400 hover:text-black transition duration-300"
