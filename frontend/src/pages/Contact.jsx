@@ -26,13 +26,6 @@ const Contact = () => {
                         <h2 className="text-xl font-semibold">✉️ Email</h2>
                         <p className="mt-2 text-gray-300 text-sm">mansi.raj.jnv@gmail.com</p>
                     </a>
-                    <a
-                        href="tel:+919508402657"
-                        className="p-6 bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-gray-700 hover:border-cyan-400 hover:bg-white/20 transition"
-                    >
-                        <h2 className="text-xl font-semibold">📞 Phone</h2>
-                        <p className="mt-2 text-gray-300 text-sm">+91-9508402657</p>
-                    </a>
                     <div className="p-6 bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-gray-700 hover:border-cyan-400 hover:bg-white/20 transition">
                         <h2 className="text-xl font-semibold">📍 Location</h2>
                         <p className="mt-2 text-gray-300 text-sm">Deoghar, Jharkhand, India</p>
